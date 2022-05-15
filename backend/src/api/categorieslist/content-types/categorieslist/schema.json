@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category",
+  "info": {
+    "singularName": "categorieslist",
+    "pluralName": "category",
+    "displayName": "Categories",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "news": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::newslist.newslist",
+      "mappedBy": "category"
+    }
+  }
+}

@@ -88,6 +88,8 @@ header {
 }
 .context {
   flex-grow: 1;
+  min-height: 100vh;
+  background-color: #66616117;
 }
 #nav {
   background-color: #b5d43c;
