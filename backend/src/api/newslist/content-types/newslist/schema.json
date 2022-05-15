@@ -16,11 +16,15 @@
       "type": "string"
     },
     "Photos": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
-      "multiple": true
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios",
+        "files"
+      ]
     },
     "Description": {
       "type": "text"

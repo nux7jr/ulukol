@@ -5,9 +5,16 @@
     <p class="gallery__text">Some descr</p>
   </div>
 </template>
+
 <script>
 export default {
   name: "GalleryList",
   props: {},
+  data() {
+    return {
+      search: "",
+      posts: [],
+    };
+  },
 };
 </script>
