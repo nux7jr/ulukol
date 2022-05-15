@@ -27,12 +27,6 @@
     },
     "Date": {
       "type": "date"
-    },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::categorieslist.categorieslist",
-      "inversedBy": "news"
     }
   }
 }

@@ -6,12 +6,10 @@
       v-model="search"
       placeholder="Писать сюда.."
     />
-    <p>
-      {{ search }}
-    </p>
-    <h2 class="news__heading">{{ info.data }}</h2>
-    <img src="" alt="" />
-    <p class="news__text">Some descr</p>
+    <div class="post" v-for="item in searchHandler" :key="item.id">
+      <h2 class="post__heading">{{ item.attributes.Name }}</h2>
+      <p class="post__text">{{ item.attributes.Description }}</p>
+    </div>
   </div>
 </template>
 <script>
@@ -21,15 +19,22 @@ export default {
   data() {
     return {
       search: "",
-      info: {},
+      posts: [],
     };
   },
   created() {
     axios.get("http://localhost:1337/api/catalognews/").then((response) => {
-      this.info = response;
-      console.log(this.info.data.data);
+      this.posts = response.data.data;
     });
   },
-  computed() {},
+  computed: {
+    searchHandler() {
+      return this.posts.filter((elem) => {
+        return elem.attributes.Name.toLowerCase().includes(
+          this.search.toLowerCase()
+        );
+      });
+    },
+  },
 };
 </script>

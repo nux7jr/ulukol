@@ -12,14 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "Category": {
       "type": "string"
-    },
-    "news": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::newslist.newslist",
-      "mappedBy": "category"
     }
   }
 }
