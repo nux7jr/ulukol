@@ -1,56 +1,43 @@
 <template>
   <header>
     <a href="#">
-      <img src="" alt="logo" />
+      <img class="header__logo" src="../public/img/logo.png" alt="logo" />
     </a>
-    <h1>Ulukol</h1>
+    <h2 class="header__heading">Дзержинский психоневрологический интернат</h2>
+    <button class="header__btn btnChangeMenu">X</button>
   </header>
   <div class="container">
-    <div id="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <router-link to="/">Home</router-link>
-        </li>
-        <li class="nav__item">
-          <router-link to="/about">About</router-link>
-        </li>
-        <li class="nav__item">
-          <router-link to="/news">News</router-link>
-        </li>
-        <li class="nav__item">
-          <router-link to="/gallery">Gallery</router-link>
-        </li>
-      </ul>
-    </div>
+    <LeftMenu />
     <router-view class="context" />
-    <div id="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <router-link to="/">Home</router-link>
-        </li>
-        <li class="nav__item">
-          <router-link to="/about">About</router-link>
-        </li>
-        <li class="nav__item">
-          <router-link to="/news">News</router-link>
-        </li>
-        <li class="nav__item">
-          <router-link to="/gallery">Gallery</router-link>
-        </li>
-      </ul>
-    </div>
+    <RightMenu />
   </div>
   <footer>
-    <h2>some footer</h2>
+    <h2 class="footer__heading">some footer</h2>
   </footer>
 </template>
-<script></script>
+
+<script>
+import LeftMenu from "@/layout/Menu/LeftMenu";
+import RightMenu from "@/layout/Menu/RightMenu";
+import SmallMenu from "@/layout/Menu/SmallMenu";
+export default {
+  name: "Layout",
+  components: {
+    RightMenu,
+    LeftMenu,
+    SmallMenu,
+  },
+  data() {
+    return {};
+  },
+};
+</script>
 <style lang="scss">
 #app {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  // text-align: center;
   color: #2c3e50;
 }
 body {
@@ -81,71 +68,44 @@ img {
   height: auto;
 }
 header {
-  background: rgba(0, 0, 0, 0.055);
+  background: rgba(46, 40, 40, 0.055);
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.header__heading {
+  color: #000;
+}
+.header__logo {
+  width: 40px;
+  height: 40px;
+  margin-top: 14px;
+}
+.header__btn {
+  width: 30px;
+  height: 30px;
 }
 .container {
   display: flex;
 }
 .context {
   flex-grow: 1;
-  min-height: 100vh;
-  background-color: #66616117;
-}
-#nav {
-  background-color: #b5d43c;
-  min-width: 120px;
-  height: 100%;
-  margin: 0 10px;
-  a {
-    font-weight: 600;
-    color: #ffffff;
-
-    &.router-link-exact-active {
-      color: #666161;
-    }
-  }
-}
-.nav__item {
-  padding: 20px;
-  &:hover {
-    background: #2c3e50;
-  }
+  min-height: 90vh;
+  min-width: 10px;
+  padding: 15px;
 }
 footer {
-  background: rgb(189, 129, 129);
-  height: 100px;
+  background: rgb(155, 145, 145);
+  height: 80px;
 }
-// section,
-// header,
-// footer {
-//   padding: 0 15px;
-// }
-// @media (min-width: 575.98px) {
-//   section,
-//   header,
-//   footer {
-//     padding: 0 calc(50vw - 270px);
-//   }
-// }
-// @media (min-width: 767.98px) {
-//   section,
-//   header,
-//   footer {
-//     padding: 0 calc(50vw - 360px);
-//   }
-// }
-// @media (min-width: 991.98px) {
-//   section,
-//   header,
-//   footer {
-//     padding: 0 calc(50vw - 480px);
-//   }
-// }
-// @media (min-width: 1199.98px) {
-//   section,
-//   header,
-//   footer {
-//     padding: 0 calc(50vw - 590px);
-//   }
-// }
+.footer__heading {
+  margin: 0;
+}
+@media (max-width: 1199.98px) {
+  #nav {
+    display: none;
+  }
+}
 </style>

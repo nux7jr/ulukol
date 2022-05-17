@@ -4,19 +4,18 @@
       class="search__input"
       type="search"
       v-model="search"
-      placeholder="Писать сюда.."
+      placeholder="Поиск"
     />
     <div class="post" v-for="item in searchHandler" :key="item.id">
-      <h2 class="post__heading">{{ item.attributes.Name }}</h2>
+      <h3 class="post__heading">{{ item.attributes.Name }}</h3>
+
+      <div class="img" v-for="img in item.attributes.Photos.data" :key="img.id">
+        <div>name {{ img.attributes.name }}</div>
+        <!-- <img class="img__item"
+        :src="require("`../../uploads/${img.attributes.name}`")" alt="" /> -->
+      </div>
       <p class="post__text">{{ item.attributes.Description }}</p>
-      <!-- <img
-        :src="`../../backend/public/uploads/${item.attributes.Photos.data.name}`"
-        alt=""
-      /> -->
-      <!-- <p>{{ item.attributes.Date }}</p> -->
-      <p>
-        {{ item.attributes.Photos.data }}
-      </p>
+      <p class="post__date">{{ item.attributes.Date }}</p>
     </div>
   </div>
 </template>
@@ -28,6 +27,7 @@ export default {
     return {
       search: "",
       posts: [],
+      Error: true,
     };
   },
   created() {
@@ -49,3 +49,22 @@ export default {
   },
 };
 </script>
+<style scoped>
+.post {
+  position: relative;
+}
+.post__date {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  margin: 0;
+}
+.search__input {
+  margin: 0 auto;
+  padding: 7px;
+}
+/* .img__item {
+  width: 100px;
+  height: 100px;
+} */
+</style>

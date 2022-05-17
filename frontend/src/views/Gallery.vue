@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import GalleryList from "@/components/Gallery";
+import GalleryList from "@/components/GalleryList";
 export default {
   name: "Gallery",
   components: {

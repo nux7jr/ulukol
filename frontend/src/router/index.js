@@ -1,8 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import PageNotFound from "../views/Error";
-import News from "../views/News";
-import Gallery from "../views/Gallery.vue";
+import Home from "@/views/Home";
+import PageNotFound from "@/views/Error";
+import News from "@/views/News";
+import Gallery from "@/views/Gallery";
+import Contacts from "@/views/Contacts";
+import Feedback from "@/views/Feedback";
 const routes = [
   {
     path: "/",
@@ -32,6 +34,16 @@ const routes = [
     path: "/gallery",
     name: "Gallery",
     component: Gallery,
+  },
+  {
+    path: "/contacts",
+    name: "Contacts",
+    component: Contacts,
+  },
+  {
+    path: "/feedback",
+    name: "Feedback",
+    component: Feedback,
   },
 ];
 
