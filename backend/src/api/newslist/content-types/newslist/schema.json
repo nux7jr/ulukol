@@ -12,10 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Photos": {
+    "photos": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -26,10 +26,10 @@
         "files"
       ]
     },
-    "Description": {
+    "description": {
       "type": "text"
     },
-    "Date": {
+    "date": {
       "type": "date"
     }
   }

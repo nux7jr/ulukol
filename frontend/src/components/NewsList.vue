@@ -7,15 +7,18 @@
       placeholder="Поиск"
     />
     <div class="post" v-for="item in searchHandler" :key="item.id">
-      <h3 class="post__heading">{{ item.attributes.Name }}</h3>
-
-      <div class="img" v-for="img in item.attributes.Photos.data" :key="img.id">
-        <div>name {{ img.attributes.name }}</div>
-        <!-- <img class="img__item"
-        :src="require("`../../uploads/${img.attributes.name}`")" alt="" /> -->
+      <h3 class="post__heading">{{ item.attributes.name }}</h3>
+      <div class="img" v-for="img in item.attributes.photos.data" :key="img.id">
+        <div>Url {{ img.attributes.url }}</div>
+        <img
+          class="img__item"
+          :src="`http://localhost:1337${img.attributes.url}`"
+          alt=""
+        />
       </div>
-      <p class="post__text">{{ item.attributes.Description }}</p>
-      <p class="post__date">{{ item.attributes.Date }}</p>
+      <p class="post__text">{{ item.attributes.description }}</p>
+      <p class="post__date">{{ item.attributes.date }}</p>
+      <hr />
     </div>
   </div>
 </template>
@@ -27,7 +30,6 @@ export default {
     return {
       search: "",
       posts: [],
-      Error: true,
     };
   },
   created() {
@@ -41,9 +43,9 @@ export default {
   computed: {
     searchHandler() {
       return this.posts.filter((elem) => {
-        return elem.attributes.Name.toLowerCase().includes(
-          this.search.toLowerCase()
-        );
+        return elem.attributes.name
+          .toLowerCase()
+          .includes(this.search.toLowerCase());
       });
     },
   },
@@ -63,8 +65,8 @@ export default {
   margin: 0 auto;
   padding: 7px;
 }
-/* .img__item {
+.img__item {
   width: 100px;
   height: 100px;
-} */
+}
 </style>

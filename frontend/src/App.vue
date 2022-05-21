@@ -1,10 +1,14 @@
 <template>
   <header>
-    <a href="#">
+    <!-- <a href="#">
       <img class="header__logo" src="../public/img/logo.png" alt="logo" />
-    </a>
-    <h2 class="header__heading">Дзержинский психоневрологический интернат</h2>
-    <button class="header__btn btnChangeMenu">X</button>
+    </a> -->
+    <div class="header__item">
+      <img class="header__logo" src="../public/img/logonew2.png" alt="" />
+      <h2 class="header__heading">Дзержинский психоневрологический интернат</h2>
+    </div>
+
+    <!-- <button class="header__btn btnChangeMenu">X</button> -->
   </header>
   <div class="container">
     <LeftMenu />
@@ -71,7 +75,7 @@ header {
   background: rgba(46, 40, 40, 0.055);
   display: flex;
   text-align: center;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -79,8 +83,8 @@ header {
   color: #000;
 }
 .header__logo {
-  width: 40px;
-  height: 40px;
+  width: 340px;
+  // height: 140px;
   margin-top: 14px;
 }
 .header__btn {
@@ -97,7 +101,7 @@ header {
   padding: 15px;
 }
 footer {
-  background: rgb(155, 145, 145);
+  background: rgba(46, 40, 40, 0.055);
   height: 80px;
 }
 .footer__heading {

@@ -43,7 +43,7 @@ export default {
 .nav__item {
   padding: 20px;
   &:hover {
-    background: #2c3e50b2;
+    background: #2c3e5054;
   }
 }
 </style>
