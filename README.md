@@ -4,14 +4,11 @@
 
 # Frontend
 ```
-npm init
-```
-```
 npm i
 ```
 Watch
 ```
-npm run watch
+npm run serve
 ```
 Build
 ```
