@@ -16,7 +16,14 @@
       <li class="nav__item">
         <router-link to="/contacts">Контакты</router-link>
       </li>
+      <li class="nav__item">
+        <router-link to="/price">Вакансии</router-link>
+      </li>
+      <li class="nav__item">
+        <router-link to="/price">Цены</router-link>
+      </li>
     </ul>
+
   </div>
 </template>
 <script>
@@ -27,7 +34,6 @@ export default {
 <style lang="scss" scoped>
 #nav {
   background-color: #66c665;
-  // height: 100%;
   min-width: 180px;
   text-align: center;
   font-size: large;

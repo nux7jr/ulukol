@@ -23,7 +23,7 @@
   </div>
 </template>
 <script>
-import axios from "axios";
+import axios from "@/axios/axios.js";
 export default {
   name: "NewsList",
   data() {
@@ -32,13 +32,10 @@ export default {
       posts: [],
     };
   },
-  created() {
-    axios
-      .get("http://localhost:1337/api/catalognews/?populate=*")
-      .then((response) => {
-        this.posts = response.data.data;
-        console.log(this.posts);
-      });
+  async created() {
+    const res = await axios.get("catalognews/?populate=*&sort=createdAt:desc");
+    this.posts = res.data.data;
+    console.log(this.posts);
   },
   computed: {
     searchHandler() {
