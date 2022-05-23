@@ -35,7 +35,6 @@ export default {
   async created() {
     const res = await axios.get("catalognews/?populate=*&sort=createdAt:desc");
     this.posts = res.data.data;
-    console.log(this.posts);
   },
   computed: {
     searchHandler() {

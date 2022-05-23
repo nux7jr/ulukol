@@ -124,7 +124,7 @@ export default {
   background-color: transparent;
   border: none;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
