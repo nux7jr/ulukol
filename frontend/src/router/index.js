@@ -5,6 +5,7 @@ import News from "@/views/News";
 import Gallery from "@/views/Gallery";
 import Contacts from "@/views/Contacts";
 import Feedback from "@/views/Feedback";
+import GalleryTemplate from "@/views/GalleryTemplate";
 const routes = [
   {
     path: "/",
@@ -44,6 +45,11 @@ const routes = [
     path: "/feedback",
     name: "Feedback",
     component: Feedback,
+  },
+  {
+    path: "/galleryTemplate/:catchAll(.*)*",
+    name: "GalleryTemplate",
+    component: GalleryTemplate,
   },
 ];
 

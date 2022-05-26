@@ -26,11 +26,11 @@
         "files"
       ]
     },
-    "description": {
-      "type": "text"
-    },
     "date": {
       "type": "date"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

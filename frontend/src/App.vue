@@ -6,13 +6,11 @@
 <script>
 import DefaultLayout from "@/layout/DefaultLayout";
 import MobileLayout from "@/layout/MobileLayout";
-import DocumentsLayout from "@/layout/DocumentsLayout";
 export default {
   name: "App",
   components: {
     DefaultLayout,
     MobileLayout,
-    DocumentsLayout,
   },
   data() {
     return {
@@ -26,9 +24,9 @@ export default {
     updateWidth() {
       this.width = window.innerWidth;
       if (this.width < 1200) {
-        this.layouts.desktop = 1199;
+        this.layouts.desktop = window.innerWidth;
       } else {
-        this.layouts.desktop = 1201;
+        this.layouts.desktop = window.innerWidth;
       }
     },
   },

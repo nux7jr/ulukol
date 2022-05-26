@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h2>
+    <h2 class="home__heading">
       Мы рады приветствовать Вас на сайте нашего учреждения. Здесь вы получите
       полную информацию о деятельности нашего учреждения и жизни клиентов.
     </h2>
@@ -52,3 +52,8 @@ export default {
   },
 };
 </script>
+<style>
+.home__heading {
+  margin-top: 0;
+}
+</style>

@@ -8,15 +8,22 @@
     />
     <div class="post" v-for="item in searchHandler" :key="item.id">
       <h3 class="post__heading">{{ item.attributes.name }}</h3>
-      <div class="img" v-for="img in item.attributes.photos.data" :key="img.id">
-        <div>Url {{ img.attributes.url }}</div>
-        <img
-          class="img__item"
-          :src="`http://localhost:1337${img.attributes.url}`"
-          alt=""
-        />
-      </div>
       <p class="post__text">{{ item.attributes.description }}</p>
+      <div class="post__media">
+        <div
+          class="img"
+          v-for="img in item.attributes.photos.data"
+          :key="img.id"
+        >
+          <!-- <div>Url big pic {{ img.attributes.url }}</div>
+          <div>Url small pic {{ img.attributes.formats.small.url }}</div> -->
+          <img
+            class="img__item"
+            :src="`http://localhost:1337${img.attributes.url}`"
+            alt="post-image"
+          />
+        </div>
+      </div>
       <p class="post__date">{{ item.attributes.date }}</p>
       <hr />
     </div>
@@ -51,6 +58,12 @@ export default {
 .post {
   position: relative;
 }
+.post__media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 .post__date {
   position: absolute;
   top: 5px;
@@ -62,7 +75,11 @@ export default {
   padding: 7px;
 }
 .img__item {
-  width: 100px;
-  height: 100px;
+  width: 240px;
+  height: 200px;
+}
+.img__item--active {
+  position: absolute;
+  top: 20%;
 }
 </style>

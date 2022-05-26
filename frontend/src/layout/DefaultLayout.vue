@@ -6,7 +6,7 @@
         <router-link class="header__link" to="/"
           ><img
             class="header__logo"
-            src="../../public/img/logonew2.png"
+            src="../../public/img/bigLogo.png"
             alt="Logo"
         /></router-link>
         <h2 class="header__heading">
@@ -69,7 +69,6 @@ header {
 .context {
   flex-grow: 1;
   min-height: 90vh;
-  min-width: 10px;
   padding: 15px;
 }
 footer {

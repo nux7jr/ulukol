@@ -1,6 +1,6 @@
 <template>
   <div class="contacts">
-    <h2>Контактная информация</h2>
+    <h3>Контактная информация</h3>
   </div>
 </template>
 <script>
