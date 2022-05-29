@@ -80,7 +80,7 @@ export default {
       const closeMenu = () => {
         if (this.isDropDownActive) {
           dropdownPlaceholder.classList.toggle("dropdown-placeholder--active");
-          this.isDropDownActive = !this.isDropDownActive;
+          this.isDropDownActive = false;
         }
       };
       closeArea.addEventListener("click", closeMenu);

@@ -48,7 +48,7 @@ const routes = [
   },
   {
     path: "/galleryTemplate/:catchAll(.*)*",
-    name: "GalleryTemplate",
+    name: "GalleryTemplate", 
     component: GalleryTemplate,
   },
 ];
