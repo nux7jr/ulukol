@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import SmallMenu from "@/layout/Menu/SmallMenu.vue";
+import SmallMenu from "@/components/Menu/SmallMenu.vue";
 export default {
   name: "MobileLayout",
   components: {

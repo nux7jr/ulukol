@@ -20,14 +20,35 @@
       <RightMenu />
     </div>
     <footer>
-      <h2 class="footer__heading">some footer</h2>
+      <div class="footer__info">
+        <h3 class="footer__heading">
+          © 2015 - 2022 КГБУ СО Дзержинский психоневрологический интернат
+        </h3>
+        <p class="footer__text">
+          663713, Красноярский край, Дзержинский район, д.Улюколь, ул. Озерная,
+          2
+        </p>
+        <p class="footer__text">Тел.: (39167) 9-02-46</p>
+        <p class="footer__text">ulukol@mail.ru</p>
+      </div>
+      <div class="footer__links">
+        <h3 class="footer__heading">
+          © 2015 - 2022 КГБУ СО Дзержинский психоневрологический интернат
+        </h3>
+        <p class="footer__text">
+          663713, Красноярский край, Дзержинский район, д.Улюколь, ул. Озерная,
+          2
+        </p>
+        <p class="footer__text">Тел.: (39167) 9-02-46</p>
+        <p class="footer__text">ulukol@mail.ru</p>
+      </div>
     </footer>
   </div>
 </template>
 
 <script>
-import LeftMenu from "@/layout/Menu/LeftMenu";
-import RightMenu from "@/layout/Menu/RightMenu";
+import LeftMenu from "@/components/Menu/LeftMenu";
+import RightMenu from "@/components/Menu/RightMenu";
 export default {
   name: "DefaultLayout",
   components: {
@@ -73,9 +94,11 @@ header {
 }
 footer {
   background: rgba(46, 40, 40, 0.055);
-  height: 80px;
+  display: flex;
+  // height: auto;
 }
 .footer__heading {
   margin: 0;
+  color: black;
 }
 </style>
