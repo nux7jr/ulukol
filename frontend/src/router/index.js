@@ -29,12 +29,12 @@ const routes = [
   {
     path: "/news",
     name: "News",
-    component: News,
+    component: () => import("../views/News.vue"),
   },
   {
     path: "/gallery",
     name: "Gallery",
-    component: Gallery,
+    component: () => import("../views/Gallery.vue"),
   },
   {
     path: "/contacts",
@@ -48,7 +48,7 @@ const routes = [
   },
   {
     path: "/galleryTemplate/:catchAll(.*)*",
-    name: "GalleryTemplate", 
+    name: "GalleryTemplate",
     component: GalleryTemplate,
   },
 ];

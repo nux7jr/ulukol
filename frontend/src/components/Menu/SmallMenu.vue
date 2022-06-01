@@ -84,7 +84,7 @@ export default {
     color: #ffffff;
 
     &.router-link-exact-active {
-      color: #000000;
+      background-color: #2c3e5054;
     }
   }
 }
@@ -92,10 +92,11 @@ export default {
   overflow-y: scroll;
   height: calc(100vh - 75px);
 }
-.nav__item {
+a {
+  display: block;
   padding: 20px;
   &:hover {
-    background: #2c3e5054;
+    background: #2c3e5038;
   }
 }
 </style>

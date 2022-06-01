@@ -17,22 +17,12 @@
         <router-link to="/contacts">Контакты</router-link>
       </li>
       <li class="nav__item">
-        <router-link to="/price">Вакансии</router-link>
+        <router-link to="/jobs">Вакансии</router-link>
       </li>
       <li class="nav__item">
         <router-link to="/price">Цены</router-link>
       </li>
     </ul>
-    <div class="customborder">
-      <a href="https://invalid24.ru/" target="_blank"
-        ><img src="../../../public/img/rias.jpg" alt=""
-      /></a>
-    </div>
-    <div class="customborder">
-      <a href="https://szn24.ru/" target="_blank"
-        ><img src="../../../public/img/soc_kras.png" alt=""
-      /></a>
-    </div>
   </div>
 </template>
 <script>
@@ -51,17 +41,16 @@ export default {
     color: #ffffff;
 
     &.router-link-exact-active {
-      color: #000000;
+      color: #ffffff;
+      background-color: #2c3e5054;
     }
   }
 }
-.nav__item {
+a {
+  display: block;
   padding: 20px;
   &:hover {
-    background: #2c3e5054;
+    background: #2c3e5038;
   }
-}
-.customborder {
-  max-width: 180px;
 }
 </style>

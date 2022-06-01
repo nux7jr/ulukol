@@ -1,5 +1,6 @@
 <template>
   <div class="gallery">
+    <h2>Фотогалерея</h2>
     <GalleryList />
   </div>
 </template>

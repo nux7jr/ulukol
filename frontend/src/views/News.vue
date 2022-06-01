@@ -1,5 +1,6 @@
 <template>
   <div class="news">
+    <h2>Новости</h2>
     <NewsList />
   </div>
 </template>

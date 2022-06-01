@@ -5,16 +5,16 @@
         <router-link to="/feedback">Обратная связь</router-link>
       </li>
       <li class="nav__item">
-        <router-link to="/price">Охрана труда</router-link>
+        <router-link to="/security">Охрана труда</router-link>
       </li>
       <li class="nav__item">
-        <router-link to="/price">Документы</router-link>
+        <router-link to="/documents">Документы</router-link>
       </li>
       <li class="nav__item">
-        <router-link to="/price">Долговременный уход</router-link>
+        <router-link to="/care">Долговременный уход</router-link>
       </li>
       <li class="nav__item">
-        <router-link to="/price">Структура учреждения</router-link>
+        <router-link to="/structure">Структура учреждения</router-link>
       </li>
       <li class="nav__item dropdown-placeholder">
         <button class="dropdownBtn" @click="toggleDropDown">
@@ -26,33 +26,35 @@
       <div v-show="isDropDownActive" class="dropdown">
         <ul class="dropdown__list">
           <li class="dropdown__item">
-            <router-link to="/price">Анти-коррупционная политика</router-link>
+            <router-link to="/politics"
+              >Анти-коррупционная политика</router-link
+            >
           </li>
           <li class="dropdown__item">
-            <router-link to="/price"
+            <router-link to="/interaction"
               >Взаимодействие с волонтерскими организациями
             </router-link>
           </li>
           <li class="dropdown__item">
-            <router-link to="/price"
+            <router-link to="/admission-procedure"
               >Порядок приема и рассмотрения обращений
             </router-link>
           </li>
           <li class="dropdown__item">
-            <router-link to="/price"
+            <router-link to="/reports"
               >Отчеты директора об итогах деятельности</router-link
             >
           </li>
           <li class="dropdown__item">
-            <router-link to="/price"
+            <router-link to="/goals"
               >Предмет и цели деятельности учреждения</router-link
             >
           </li>
           <li class="dropdown__item">
-            <router-link to="/price">Персональные данные</router-link>
+            <router-link to="/personal-data">Персональные данные</router-link>
           </li>
           <li class="dropdown__item">
-            <router-link to="/price">Отзывы</router-link>
+            <router-link to="/reviews">Отзывы</router-link>
           </li>
         </ul>
       </div>
@@ -101,7 +103,7 @@ export default {
     color: #ffffff;
 
     &.router-link-exact-active {
-      color: #000000;
+      background-color: #2c3e5054;
     }
   }
 }
@@ -111,16 +113,18 @@ export default {
   right: 182px;
   background-color: #66c665;
 }
-.nav__item,
-.dropdown__item {
+a {
+  display: block;
   width: 140px;
   padding: 20px;
   &:hover {
-    background: #2c3e5054;
+    background: #2c3e5038;
   }
 }
 .dropdownBtn {
   position: relative;
+  height: 70px;
+
   background-color: transparent;
   border: none;
   padding: 0;

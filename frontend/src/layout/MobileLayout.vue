@@ -19,6 +19,27 @@
     </header>
     <SmallMenu class="small-menu" v-show="isMenuOpen" />
     <router-view class="context" />
+    <footer>
+      <div class="footer__info">
+        <h3 class="footer__heading">
+          © 2015 - 2022 КГБУ СО Дзержинский психоневрологический интернат
+        </h3>
+        <p class="footer__text">
+          663713, Красноярский край, Дзержинский район, д.Улюколь, ул. Озерная,
+          2
+        </p>
+        <address>
+          <div class="phone footer__text">
+            <a href="tel:+7391690246" class="footer__text"
+              >Тел.: (39167) 9-02-46</a
+            >
+          </div>
+          <a class="footer__text" href="mailto:ulukol@mail.ru"
+            >ulukol@mail.ru</a
+          >
+        </address>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -133,7 +154,25 @@ header {
   z-index: 3;
 }
 .context {
+  min-height: 90vh;
   padding: 15px;
   margin-top: 75px;
+}
+footer {
+  background: rgba(46, 40, 40, 0.055);
+
+  display: flex;
+  justify-content: center;
+}
+.footer__info {
+  margin: 15px;
+  align-self: center;
+}
+.footer__heading {
+  margin: 0;
+  color: black;
+}
+.footer__text {
+  color: #2c3e50;
 }
 </style>

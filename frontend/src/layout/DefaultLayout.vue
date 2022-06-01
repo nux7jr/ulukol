@@ -4,10 +4,7 @@
     <header>
       <div class="header__item">
         <router-link class="header__link" to="/"
-          ><img
-            class="header__logo"
-            src="../../public/img/bigLogo.png"
-            alt="Logo"
+          ><img class="header__logo" src="@/assets/img/bigLogo.png" alt="Logo"
         /></router-link>
         <h2 class="header__heading">
           Дзержинский психоневрологический интернат
@@ -28,19 +25,70 @@
           663713, Красноярский край, Дзержинский район, д.Улюколь, ул. Озерная,
           2
         </p>
-        <p class="footer__text">Тел.: (39167) 9-02-46</p>
-        <p class="footer__text">ulukol@mail.ru</p>
+        <address>
+          <div class="phone footer__text">
+            <a href="tel:+7391690246" class="footer__text"
+              >Тел.: (39167) 9-02-46</a
+            >
+          </div>
+          <a class="footer__text" href="mailto:ulukol@mail.ru"
+            >ulukol@mail.ru</a
+          >
+        </address>
       </div>
       <div class="footer__links">
-        <h3 class="footer__heading">
-          © 2015 - 2022 КГБУ СО Дзержинский психоневрологический интернат
-        </h3>
-        <p class="footer__text">
-          663713, Красноярский край, Дзержинский район, д.Улюколь, ул. Озерная,
-          2
-        </p>
-        <p class="footer__text">Тел.: (39167) 9-02-46</p>
-        <p class="footer__text">ulukol@mail.ru</p>
+        <div class="footer__img">
+          <a href="https://szn24.ru/" target="_blank">
+            <img src="@/assets/img/footer/soc_kras.png" alt="Соц политика" />
+          </a>
+        </div>
+        <div class="footer__img">
+          <a href="http://www.krskstate.ru/" target="_blank">
+            <img
+              src="@/assets/img/footer/kras_portal.png"
+              alt="Красноярский портал"
+            />
+          </a>
+        </div>
+        <div class="footer__img">
+          <a href="https://bus.gov.ru/pub/home" target="_blank">
+            <img
+              src="@/assets/img/footer/bus_gov.png"
+              alt="Красноярский портал"
+            />
+          </a>
+        </div>
+        <div class="footer__img">
+          <a
+            href="https://zakupki.gov.ru/epz/main/public/home.html"
+            target="_blank"
+          >
+            <img src="@/assets/img/footer/zakup.png" alt="Закупки" />
+          </a>
+        </div>
+        <div class="footer__img">
+          <a href="https://gosuslugi.krskstate.ru/" target="_blank">
+            <img src="@/assets/img/footer/reg_usl.png" alt="Услуги" />
+          </a>
+        </div>
+        <div class="footer__img">
+          <a href="http://kartadostupnosti.ru/" target="_blank">
+            <img
+              src="@/assets/img/footer/kart_dost.png"
+              alt="Карта доступности"
+            />
+          </a>
+        </div>
+        <div class="footer__img">
+          <a href="https://24reg.roszdravnadzor.gov.ru/" target="_blank">
+            <img src="@/assets/img/footer/rzn.jpg" alt="РЗН" />
+          </a>
+        </div>
+        <div class="footer__img">
+          <a href="https://24.mchs.gov.ru/" target="_blank">
+            <img src="@/assets/img/footer/mhs.jpg" alt="МСЧ" />
+          </a>
+        </div>
       </div>
     </footer>
   </div>
@@ -94,11 +142,29 @@ header {
 }
 footer {
   background: rgba(46, 40, 40, 0.055);
+
   display: flex;
-  // height: auto;
+  justify-content: center;
+  gap: 20px;
+}
+.footer__info {
+  align-self: center;
 }
 .footer__heading {
   margin: 0;
   color: black;
+}
+.footer__text {
+  color: #2c3e50;
+}
+.footer__links {
+  margin: 30px 0;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.footer__img {
+  width: 160px;
+  height: 43px;
 }
 </style>
