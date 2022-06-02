@@ -1,15 +1,59 @@
 <template>
   <div class="GalleryTemplate">
-    <h3>THIS IMG TEAMPLATE</h3>
+    <div class="gallery">
+      <!-- <p>{{ gallery.attributes.title }}</p> -->
+      <div
+        class="gallery__item"
+        v-for="media in gallery.attributes.media.data"
+        :key="media.id"
+      >
+        <img
+          class="gallery__img"
+          :src="`http://localhost:1337${media.attributes.url}`"
+          alt="img"
+        />
+      </div>
+    </div>
   </div>
 </template>
 <script>
-import GalleryList from "@/components/GalleryList";
+import axios from "@/axios/axios.js";
 export default {
   name: "GalleryTemplate",
-  components: {
-    GalleryList,
+  data() {
+    return {
+      gallery: {},
+      galleryID: this.$route.params.galleryID,
+    };
   },
+  components: {},
   props: {},
+  async created() {
+    const res = await axios.get("galleries/?populate=*&sort=createdAt:asc");
+    this.gallery = res.data.data;
+    this.gallery = this.gallery[this.$route.params.galleryID - 1];
+    console.log(this.gallery);
+  },
+  mounted() {
+    window.scrollTo({
+      top: 10,
+      behavior: "smooth",
+    });
+  },
 };
 </script>
+<style lang="scss" scoped>
+.GalleryTemplate {
+  min-height: calc(100vh - 75px);
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 20px;
+}
+.gallery__img {
+  max-width: 300px;
+  height: fit-content;
+}
+</style>

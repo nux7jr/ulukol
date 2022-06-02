@@ -2,7 +2,6 @@
 <template>
   <div class="layout">
     <header>
-      <!-- <img class="header__img" src="../../public/img/smallLogo.png" alt="" /> -->
       <h3 class="header__heading">
         <router-link class="header__link" to="/"
           >Дзержинский психоневрологический интернат</router-link
@@ -10,7 +9,7 @@
       </h3>
       <!-- burger -->
       <div class="header__btn burger">
-        <button @click="toggleMenu" class="nav-toggle">
+        <button @click="toggleMenu" class="nav-toggle" aria-label="menu">
           <span class="bar-top"></span>
           <span class="bar-mid"></span>
           <span class="bar-bot"></span>

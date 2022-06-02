@@ -15,8 +15,6 @@
           v-for="img in item.attributes.photos.data"
           :key="img.id"
         >
-          <!-- <div>Url big pic {{ img.attributes.url }}</div>
-          <div>Url small pic {{ img.attributes.formats.small.url }}</div> -->
           <img
             class="img__item"
             :src="`http://localhost:1337${img.attributes.url}`"
