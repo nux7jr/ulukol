@@ -1,6 +1,6 @@
 <template>
   <div class="gallery">
-    <h2>Фотогалерея</h2>
+    <h3 class="gallery__heading">Фотогалерея</h3>
     <GalleryList />
   </div>
 </template>
@@ -13,3 +13,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.gallery__heading {
+  margin-top: 0;
+}
+</style>

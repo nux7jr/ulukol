@@ -1,6 +1,6 @@
 <template>
   <div class="feedback">
-    <h3>Обратная связь</h3>
+    <h3 class="feedback__heading">Обратная связь</h3>
     <FeedbackFrom />
   </div>
 </template>
@@ -13,3 +13,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.feedback__heading {
+  margin-top: 0;
+}
+</style>

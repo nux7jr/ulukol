@@ -17,7 +17,7 @@
         >
           <img
             class="img__item"
-            :src="`http://localhost:1337${img.attributes.url}`"
+            :src="`https://fathomless-bayou-43387.herokuapp.com${img.attributes.url}`"
             alt="post-image"
           />
         </div>
@@ -60,7 +60,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: left;
 }
 .post__date {
   position: absolute;
@@ -74,7 +74,6 @@ export default {
 }
 .img__item {
   width: 240px;
-  height: 200px;
 }
 .img__item--active {
   position: absolute;

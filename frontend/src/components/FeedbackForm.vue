@@ -122,11 +122,7 @@ export default {
 .form__link {
   display: block;
 
-  color: black  ;
-
-  font-weight: 600;
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
+  color: black;
 
   margin-top: 25px;
 }

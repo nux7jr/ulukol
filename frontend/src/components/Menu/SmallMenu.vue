@@ -17,10 +17,7 @@
         <router-link class="nav__link" to="/contacts">Контакты</router-link>
       </li>
       <li class="nav__item">
-        <router-link class="nav__link" to="/price">Вакансии</router-link>
-      </li>
-      <li class="nav__item">
-        <router-link class="nav__link" to="/price">Цены</router-link>
+        <router-link class="nav__link" to="/jobs">Вакансии</router-link>
       </li>
       <li class="nav__item">
         <router-link class="nav__link" to="/price">Цены</router-link>
@@ -31,34 +28,53 @@
         >
       </li>
       <li class="nav__item">
-        <router-link class="nav__link" to="/price">Some link</router-link>
+        <router-link class="nav__link" to="/security">Охрана труда</router-link>
       </li>
       <li class="nav__item">
-        <router-link class="nav__link" to="/price">Some link</router-link>
+        <router-link class="nav__link" to="/documents">Документы</router-link>
       </li>
       <li class="nav__item">
-        <router-link to="/price">Some link</router-link>
+        <router-link class="nav__link" to="/care"
+          >Долговременный уход</router-link
+        >
       </li>
       <li class="nav__item">
-        <router-link to="/price">Some link</router-link>
+        <router-link class="nav__link" to="/structure"
+          >Структура учреждения</router-link
+        >
       </li>
       <li class="nav__item">
-        <router-link to="/price">Some link</router-link>
+        <router-link class="nav__link" to="/politics"
+          >Анти-коррупционная политика</router-link
+        >
       </li>
       <li class="nav__item">
-        <router-link to="/price">Some link</router-link>
+        <router-link class="nav__link" to="/interaction"
+          >Взаимодействие с волонтерскими организациями
+        </router-link>
       </li>
       <li class="nav__item">
-        <router-link to="/price">Some link</router-link>
+        <router-link class="nav__link" to="/admission-procedure"
+          >Порядок приема и рассмотрения обращений
+        </router-link>
       </li>
       <li class="nav__item">
-        <router-link to="/price">Some link</router-link>
+        <router-link class="nav__link" to="/reports"
+          >Отчеты директора об итогах деятельности</router-link
+        >
       </li>
       <li class="nav__item">
-        <router-link to="/price">Some link</router-link>
+        <router-link class="nav__link" to="/goals"
+          >Предмет и цели деятельности учреждения</router-link
+        >
       </li>
       <li class="nav__item">
-        <router-link to="/price">Some link(Last)</router-link>
+        <router-link class="nav__link" to="/personal-data"
+          >Персональные данные</router-link
+        >
+      </li>
+      <li class="nav__item">
+        <router-link class="nav__link" to="/reviews">Отзывы</router-link>
       </li>
     </ul>
   </div>

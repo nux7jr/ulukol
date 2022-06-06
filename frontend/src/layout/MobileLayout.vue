@@ -3,7 +3,7 @@
   <div class="layout">
     <header>
       <h3 class="header__heading">
-        <router-link class="header__link" to="/"
+        <router-link class="header__link" to="/" @click="scrolltoTop"
           >Дзержинский психоневрологический интернат</router-link
         >
       </h3>
@@ -21,22 +21,26 @@
     <footer>
       <div class="footer__info">
         <h3 class="footer__heading">
-          © 2015 - 2022 КГБУ СО Дзержинский психоневрологический интернат
+          <i> © 2015 - 2022 </i>КГБУ СО Дзержинский психоневрологический
+          интернат
         </h3>
         <p class="footer__text">
           663713, Красноярский край, Дзержинский район, д.Улюколь, ул. Озерная,
           2
         </p>
-        <address>
-          <div class="phone footer__text">
-            <a href="tel:+7391690246" class="footer__text"
-              >Тел.: (39167) 9-02-46</a
+        <div class="footer__adress">
+          <address>
+            <div class="phone footer__text">
+              <a href="tel:+7391690246" class="footer__text"
+                >Тел.: (39167) 9-02-46</a
+              >
+            </div>
+            <a class="footer__text" href="mailto:ulukol@mail.ru"
+              >ulukol@mail.ru</a
             >
-          </div>
-          <a class="footer__text" href="mailto:ulukol@mail.ru"
-            >ulukol@mail.ru</a
-          >
-        </address>
+          </address>
+          <img class="footer__img" src="@/assets/img/logo2.png" alt="" />
+        </div>
       </div>
     </footer>
   </div>
@@ -59,6 +63,12 @@ export default {
       const toggle = document.querySelector(".nav-toggle");
       toggle.classList.toggle("opened");
       this.isMenuOpen = !this.isMenuOpen;
+    },
+    scrolltoTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     },
   },
   watch: {
@@ -173,5 +183,15 @@ footer {
 }
 .footer__text {
   color: #2c3e50;
+}
+.footer__adress {
+  display: flex;
+  gap: 20px;
+}
+address {
+  margin-top: 10px;
+}
+.footer__img {
+  width: 150px;
 }
 </style>

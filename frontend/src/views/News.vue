@@ -1,6 +1,6 @@
 <template>
   <div class="news">
-    <h2>Новости</h2>
+    <h3 class="news__heading">Новости</h3>
     <NewsList />
   </div>
 </template>
@@ -13,3 +13,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.news__heading {
+  margin-top: 0;
+}
+</style>

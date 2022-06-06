@@ -1,7 +1,6 @@
 <template>
   <div class="GalleryTemplate">
     <div class="gallery">
-      <!-- <p>{{ gallery.attributes.title }}</p> -->
       <div
         class="gallery__item"
         v-for="media in gallery.attributes.media.data"
@@ -9,7 +8,7 @@
       >
         <img
           class="gallery__img"
-          :src="`http://localhost:1337${media.attributes.url}`"
+          :src="`https://fathomless-bayou-43387.herokuapp.com${media.attributes.url}`"
           alt="img"
         />
       </div>
@@ -32,11 +31,10 @@ export default {
     const res = await axios.get("galleries/?populate=*&sort=createdAt:asc");
     this.gallery = res.data.data;
     this.gallery = this.gallery[this.$route.params.galleryID - 1];
-    console.log(this.gallery);
   },
   mounted() {
     window.scrollTo({
-      top: 10,
+      top: 0,
       behavior: "smooth",
     });
   },

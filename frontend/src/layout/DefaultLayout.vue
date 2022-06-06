@@ -3,7 +3,7 @@
   <div class="layout">
     <header>
       <div class="header__item">
-        <router-link class="header__link" to="/"
+        <router-link class="header__link" to="/" @click="scrolltoTop"
           ><img class="header__logo" src="@/assets/img/bigLogo.png" alt="Logo"
         /></router-link>
         <h2 class="header__heading">
@@ -102,6 +102,14 @@ export default {
   components: {
     RightMenu,
     LeftMenu,
+  },
+  methods: {
+    scrolltoTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
   },
   data() {
     return {};
